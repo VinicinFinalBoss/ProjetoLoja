@@ -1,4 +1,6 @@
 from django.db import models
+
+from django.db import models
 from decimal import Decimal
 from produtos.models import Produto
 
@@ -45,3 +47,4 @@ class ItemPedido(models.Model):
     def get_sub_total(self):
         return self.preco * self.quantidade
 
+# Create your models here.

@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.http import require_POST
 from produtos.models import Produto
@@ -30,7 +31,7 @@ def detalhes_carrinho(request):
     carrinho = Carrinho(request)
     for item in carrinho:
         item['formulario_adicionar_produto_ao_carrinho'] = \
-            FormAdicionarProdutoAoCarrinho(
-                initial={'quantidade': item['quantidade'], 'atualizar': True})
+            FormAdicionarProdutoAoCarrinho(initial={'quantidade': item['quantidade'], 'atualizar': True})
     return render(request, 'carrinho/detalhes_carrinho.html', {'carrinho': carrinho})
 
+# Create your views here.

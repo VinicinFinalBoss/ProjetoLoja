@@ -10,24 +10,25 @@ Class-based views
     1. Add an import:  from other_app.views import Home
     2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
 Including another URLconf
-    1. Import to include() function: from django.urls import include, path
+    1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.contrib import admin
+from django.urls import path
+
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('main.urls')),
-    path('produtos/', include('produtos.urls', namespace='produtos')),
-    path('carrinho/', include('carrinho.urls', namespace='carrinho')),
-    path('pedidos/', include('pedidos.urls', namespace='pedidos')),
-    path('contas/', include('django.contrib.auth.urls')),
-    path('', include('main.urls'))] + static(settings.MEDIA_URL,ducument_root=settings.MEDIA_ROOT)
+                  path('admin/', admin.site.urls),
 
-
-
-
-
+                  # para qualquer rota ' ', deve ser incluido o arquivo de rotas da aplicação core(main.urls)
+                  path('contas/', include('django.contrib.auth.urls')),
+                  path('', include('main.urls')),
+                  path('produtos/', include('produtos.urls', namespace='produtos')),
+                  path('carrinho/', include('carrinho.urls', namespace='carrinho')),
+                  path('pedidos/', include('pedidos.urls', namespace='pedidos')),
+                  # template de todas as aplicações dentro do proheto, tenham acesso às imagens
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

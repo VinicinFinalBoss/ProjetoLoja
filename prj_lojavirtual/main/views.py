@@ -3,9 +3,14 @@ from .forms import ContatoForm
 from django.contrib import messages
 
 
-
 def index(request):
     return render(request, 'main/index.html')
+
+
+def sobre (request):
+    return render(request, 'main/sobre.html')
+
+from django.shortcuts import render
 
 def contato(request):
 
@@ -31,10 +36,5 @@ def contato(request):
         'form': form
     }
     return render(request, 'main/contato.html', context)
-
-
-def sobre(request):
-    return render(request, 'main/sobre.html')
-
 
 

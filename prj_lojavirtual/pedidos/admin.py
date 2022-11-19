@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib import admin
 from .models import Pedido, ItemPedido
 
 
@@ -15,3 +16,4 @@ class PedidoAdmin(admin.ModelAdmin):
     list_filter = ['pago', 'data_criacao', 'nome']
     inlines = [ItemPedidoInLine]
 
+# Register your models here.

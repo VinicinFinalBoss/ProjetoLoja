@@ -8,10 +8,11 @@
     {% endfor %}
 </ul>
 {% else %}
-<form method="POST" class ="contact">
+<form method="POST" class="contact">>
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Enviar Mensagem</button>
 </form>
 {% endif %}
 {% endblock conteudo %}
+

@@ -10,7 +10,7 @@ def listar_produtos(request, slug_categoria=None):
     lista_produtos = Produto.objects.filter(ativo=True)
     if slug_categoria:
         categoria = get_object_or_404(Categoria, slug=slug_categoria)
-    lista_produtos = Produto.objects.filter(categoria=categoria)
+        lista_produtos = Produto.objects.filter(categoria=categoria)
     contexto = {
         'categoria': categoria,
         'lista_categorias': lista_categorias,
@@ -25,9 +25,12 @@ def detalhar_produto(request, id_produto, slug_produto):
                                 id=id_produto,
                                 slug=slug_produto,
                                 ativo=True)
+
     form_adicionar_produto_ao_carrinho = FormAdicionarProdutoAoCarrinho()
+
     contexto = {
         'produto': produto,
         'form_produto_carrinho': form_adicionar_produto_ao_carrinho
+
     }
     return render(request, 'produtos/detalhes.html', contexto)

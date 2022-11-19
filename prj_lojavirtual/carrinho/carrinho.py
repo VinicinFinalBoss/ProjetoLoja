@@ -2,7 +2,6 @@ from decimal import Decimal
 from django.conf import settings
 from produtos.models import Produto
 
-
 class Carrinho:
 
     def __init__(self, request):
