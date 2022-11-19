@@ -12,4 +12,9 @@
      margin: 5px;
      width: 15rem;
      padding: 10px;
+    border: 10px solid #C4A77D;
+    border-radius: 20px;
+}
+body{
+    background-color: #C4C6E7
 }
