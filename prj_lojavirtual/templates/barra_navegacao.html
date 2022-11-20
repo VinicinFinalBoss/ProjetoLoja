@@ -1,25 +1,30 @@
-<nav>
-    <a href="/">Página Principal</a> |
-    <a href="/produtos">Produtos</a> |
-    <a href="/contato">Entre em contato</a> |
-    <a href="/sobre">Sobre nós</a>
-    {% if not user.is_anonymous %}
-    <h3>Links Administrativos:</h3>
-    <ul>
-        <li><a href="/admin/auth/user/">Usuários</a></li>
-        <li><a href="/admin/produtos/produto/">Produtos</a></li>
-        <li><a href="/admin/produtos/categoria/">Categoria</a></li>
-        <li><a href="/admin/pedidos/pedido/">Pedidos</a></li>
-    </ul>
+<header class="header-container">
+    <div class="divLogo">
+        <a href="/"><img class="logo" src="../static/img/logo.png" alt="Logo do Site"></a>
+    </div>
+    <nav class="navegacao grow1">
+        <ul class="containerLinks">
+            <a class="grow1 espacamentoP textCenter paddingTopBot botaoLegal" href="/"><li>Página Principal</li></a>
+            <a class="grow1 espacamentoP textCenter paddingTopBot botaoLegal" href="/produtos"><li>Produtos</li></a>
+            <a class="grow1 espacamentoP textCenter paddingTopBot botaoLegal" href="/contato"><li>Nosso Contato</li></a>
+            <a class="grow1 espacamentoP textCenter paddingTopBot botaoLegal" href="/sobre"><li>Sobre Nós</li></a>
+            {% if not user.is_anonymous %}
+            <a class="grow1 espacamentoP textCenter paddingTopBot botaoLegal" href="/admin/auth/user/"><li>Usuários</li></a>
+            <a class="grow1 espacamentoP textCenter paddingTopBot botaoLegal" href="/admin/produtos/produto/"><li>Produtos</li></a>
+            <a class="grow1 espacamentoP textCenter paddingTopBot botaoLegal" href="/admin/produtos/categoria/"><li>Categoria</li></a>
+            <a class="grow1 espacamentoP textCenter paddingTopBot botaoLegal" href="/admin/pedidos/pedido/"><li>Pedidos</li></a>
+            {% endif %}
+        </ul>
+    </nav>
+    <a class="inlineBlock" href="/admin/"><img class="login" src="../static/img/login.png" alt="Login"></a>
+</header>
+<h4>{% with quantidade_itens=carrinho|length %}
+    {% if quantidade_itens > 0 %}
+    Seu carrinho de compras:
+    <a href="{% url 'carrinho:detalhes_carrinho' %}">{{ quantidade_itens }}
+        produto{{ quantidade_itens|pluralize }} - R${{ carrinho.get_total_geral }}</a>
+    {% else %}
+    Seu carrinho está vazio.
     {% endif %}
-    <h4>{% with quantidade_itens=carrinho|length %}
-        {% if quantidade_itens > 0 %}
-        Seu carrinho de compras:
-        <a href="{% url 'carrinho:detalhes_carrinho' %}">{{ quantidade_itens }}
-            produto{{ quantidade_itens|pluralize }} - R${{ carrinho.get_total_geral }}</a>
-        {% else %}
-        Seu carrinho está vazio.
-        {% endif %}
-        {% endwith %}
-    </h4>
-</nav>
+    {% endwith %}
+</h4>

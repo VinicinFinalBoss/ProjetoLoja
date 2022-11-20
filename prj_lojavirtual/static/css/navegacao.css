@@ -1,0 +1,72 @@
+.header-container{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.divLogo{
+    padding-top:17px;
+    background-color: aquamarine;
+}
+
+.logo{
+    width: 120px;
+    height: 120px;
+    align-self: center;
+    border: 5px solid #000;
+    border-radius: 68px;
+    margin: 30px;
+}
+
+.containerLinks{
+    display:flex;
+    height: 200px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkcyan;
+}
+
+.espacamentoP{
+    margin: 0 10px !important;
+}
+
+.grow1{
+    flex-grow: 1;
+}
+
+.paddingTopBot{
+    padding: 10px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.botaoLegal{
+    background-color: #e6e4ec;
+    border: 2px solid rgb(168, 166, 166);
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.botaoLegal:hover {
+    background-color: aliceblue;
+    transition: 0.2s;
+}
+
+.login {
+    width: 200px;
+    height: 198px;
+    align-self: center;
+    background-color: blanchedalmond;
+}
+
+.textCenter{
+    text-align: center;
+}
+
+.inlineBlock{
+    display: inline-block
+}
