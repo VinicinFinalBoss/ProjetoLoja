@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91cfff69-f8e5-4500-922e-accb65e91f60" name="Changes" comment="formulário">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjetoLojaVirtual/prj_lojavirtual/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/ProjetoLojaVirtual/prj_lojavirtual/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prj_lojavirtual/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/prj_lojavirtual/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prj_lojavirtual/static/css/pedido.css" beforeDir="false" afterPath="$PROJECT_DIR$/prj_lojavirtual/static/css/pedido.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prj_lojavirtual/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/prj_lojavirtual/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prj_lojavirtual/templates/pedidos/pedido/criar.html" beforeDir="false" afterPath="$PROJECT_DIR$/prj_lojavirtual/templates/pedidos/pedido/criar.html" afterDir="false" />
-    </list>
+    <list default="true" id="91cfff69-f8e5-4500-922e-accb65e91f60" name="Changes" comment="formulario" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +31,14 @@
       <option name="presentableId" value="Default" />
       <updated>1669255664462</updated>
     </task>
+    <task id="LOCAL-00001" summary="formulario">
+      <created>1669306487837</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669306487837</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -50,5 +51,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="formulario" />
+    <option name="LAST_COMMIT_MESSAGE" value="formulario" />
   </component>
 </project>
