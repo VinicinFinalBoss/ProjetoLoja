@@ -12,8 +12,11 @@
     </ul>
     <p>Total Geral: R$ {{ carrinho.get_total_geral }}</p>
     <form action="." method="post" class="order">
+        <h2>Formulário Solicitar Pedido</h2>
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Enviar pedido</button>
+        <div class="submitPedido">
+            <button type="submit" class="btn btn-primary">Enviar pedido</button>
+        </div>
     </form>
 {% endblock %}
