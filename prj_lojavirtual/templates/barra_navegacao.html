@@ -18,6 +18,7 @@
     </nav>
     <a class="inlineBlock" href="/admin/"><img class="login" src="/static/img/login.png" alt="Login"></a>
 </header>
+<div class="carrinho_flutuante">
 <h4>{% with quantidade_itens=carrinho|length %}
     {% if quantidade_itens > 0 %}
     Seu carrinho de compras:
@@ -28,3 +29,4 @@
     {% endif %}
     {% endwith %}
 </h4>
+</div>

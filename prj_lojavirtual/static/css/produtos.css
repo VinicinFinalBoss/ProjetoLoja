@@ -18,3 +18,16 @@
 body{
     background-color: #C4C6E7
 }
+.carrinho_compras{
+    display: flex;
+
+
+}
+.carrinho_flutuante{
+    display: flex;
+     border: 10px solid #C4A77D;
+    background-color:#C4A77D;
+}
+.t, table{
+    margin:10px;
+}

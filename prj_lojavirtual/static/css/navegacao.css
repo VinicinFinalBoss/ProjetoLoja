@@ -3,6 +3,7 @@
     /* flex-direction: row; */
     justify-content: space-between;
     align-items: center;
+
 }
 
 .divLogo{
@@ -61,6 +62,7 @@ a {
     height: 198px;
     align-self: center;
     background-color: blanchedalmond;
+    paddding-botton: 2px;
 }
 
 .textCenter{

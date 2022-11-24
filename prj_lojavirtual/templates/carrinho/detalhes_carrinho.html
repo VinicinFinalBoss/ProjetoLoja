@@ -2,20 +2,23 @@
 {% block conteudo %}
 
 {% if carrinho|length == 0 %}
+
 <h2>Seu Carrinho está vazio!</h2>
 <a href="{% url 'produtos:listar_produtos' %}">Comprar</a>
 {% else %}
-<h2>Seu Carrinho de Compras:</h2>
-<table>
-    <thead>
-    <tr>
-        <th>Produto</th>
-        <th>Quantidade</th>
-        <th>Remover</th>
-        <th>Preço unitário</th>
-        <th>Subtotal</th>
-    </tr>
-    </thead>
+ <div class="carrinho_compras">
+    <h2>Seu Carrinho de Compras:</h2>
+    <table>
+        <thead>
+        <tr>
+            <th >Produto&nbsp;&nbsp;&nbsp;&nbsp;&nbsp</th>
+            <th >Quantidade&nbsp;&nbsp;&nbsp;&nbsp;&nbsp</th>
+            <th >Remover&nbsp;&nbsp;&nbsp;&nbsp;&nbsp</th>
+            <th >Preço unitário&nbsp;&nbsp;&nbsp;&nbsp;&nbsp</th>
+            <th >Subtotal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp</th>
+        </tr>
+        </thead>
+ </div>
     <tbody>
     {% for item in carrinho %}
     {% with produto=item.produto %}
@@ -43,8 +46,9 @@
     </tr>
     </tbody>
 </table>
-<a href="{% url 'produtos:listar_produtos' %}">Comprar mais produtos</a>
-<a href="{% url 'pedidos:criar_pedido' %}"> Finalizar</a>
+<a href="{% url 'produtos:listar_produtos' %}">Comprar mais produtos&nbsp;&nbsp;&nbsp;&nbsp</a>
+
+<a href="{% url 'pedidos:criar_pedido' %}"> Finalizar&nbsp;&nbsp;&nbsp;&nbsp</a>
 
 {% endif %}
 {% endblock %}

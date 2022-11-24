@@ -2,9 +2,9 @@
 {% block conteudo %}
 
 <h2>Categorias</h2>
-<a href="/produtos">Todas as categorias</a>
+<button type="button" class="btn btn-outline-primary"><a href="/produtos">Todas as categorias</a></button>
 {% for categoria in lista_categorias %}
-    <a href="{{ categoria.get_absolute_url }}">{{ categoria.nome }}</a>
+    <button type="button" class="btn btn-outline-primary"><a href="{{ categoria.get_absolute_url }}">{{ categoria.nome }}</a></button>
 {% endfor %}
 
 <h2>Produtos</h2>
